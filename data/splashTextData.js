@@ -1,4 +1,4 @@
-var splashTextArray = ["Venturing Into The Unknown...",
+var splashTextArray = ["ITS A GAME THAT IS BROCKEN",
 "Installing Virus...because you dont have virus protection",
 "Deleting Windows...wait, nevermind",
 "Nope... testa",
@@ -10,6 +10,7 @@ var splashTextArray = ["Venturing Into The Unknown...",
 "Rage Quit",		       
 "Well, Stalked yet again",		       
 "Spam!!!!!!!!!!!!!! We love it!!",
+"Hacked!",
 ];
 var splashText = splashTextArray[Math.floor(Math.random()*splashTextArray.length)];
 
@@ -28,5 +29,8 @@ if(currentDate.indexOf("Dec 25") !== -1){
 }
 if(currentDate.indexOf("Jan 21") !== -1){
 	splashText = "Happy Birthday SpiderGamin!";
+}
+if(currentDate.indexOf("Jul 13") !== -1){
+	splashText = "Happy Birthday Cloud!";
 }
 document.getElementById("splashText").textContent = splashText;
