@@ -1,13 +1,13 @@
 {
-  "name": "SpaceCompany",
-  "version": "0.4.3",
-  "homepage": "https://github.com/sparticle999/SpaceCompany",
+  "name": "To Be Named",
+  "version": "0.0.1",
+  "homepage": "https://github.com/SpiderGamin/SpiderGamin.github.io",
   "licenses": "",
   "author": {
-	  "name": "sparticle999"
+	  "name": "SpiderGamin"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.0.1"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
