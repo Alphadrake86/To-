@@ -15,12 +15,12 @@ Game.buildingData = (function () {
         desc: 'Burns Charcoal to produce a steady source of Energy.',
         resource: 'energy',
         resourcePerSecond: {
-            'energy': 2,
-            'charcoal': -1
+            'energy': 10,
+            'charcoal': +1
         },
         cost: {
-            'metal': 50,
-            'gem': 25
+            'metal': 0,
+            'gem': 0
         }
     });
 
@@ -29,11 +29,11 @@ Game.buildingData = (function () {
         desc: 'Gains Energy slowly from the sun without using any resources.',
         resource: 'energy',
         resourcePerSecond: {
-            'energy': 1.5
+            'energy': 100000
         },
         cost: {
-            'metal': 30,
-            'gem': 35
+            'metal': 0,
+            'gem': 0
         }
     });
 
@@ -42,12 +42,12 @@ Game.buildingData = (function () {
         desc: 'Burn powerful methane from Venus to satisfy all your power needs.',
         resource: 'energy',
         resourcePerSecond: {
-            'energy': 23,
-            'methane': -6
+            'energy': 2300000,
+            'methane': +6
         },
         cost: {
-            'lunarite': 110,
-            'titanium': 90
+            'lunarite': 0,
+            'titanium': 0
         }
     });
 
@@ -56,12 +56,12 @@ Game.buildingData = (function () {
         desc: 'Uses fission to create large amounts of power.',
         resource: 'energy',
         resourcePerSecond: {
-            'energy': 153,
-            'uranium': -7
+            'energy': 1530000000,
+            'uranium': +10
         },
         cost: {
-            'lunarite': 20000,
-            'titanium': 10000
+            'lunarite': 0,
+            'titanium': 0
         }
     });
 
@@ -70,13 +70,13 @@ Game.buildingData = (function () {
         desc: 'The Magmatic Dynamo is a method of producing power by using lava as a fuel. Because of the extreme temperature of lava, a lot of Energy can be produced at once.',
         resource: 'energy',
         resourcePerSecond: {
-            'energy': 191,
-            'lava': -11
+            'energy': 191000000000,
+            'lava': +20
         },
         cost: {
-            'lunarite': 25000,
-            'gem': 30000,
-            'silver': 20000
+            'lunarite': 0,
+            'gem': 0,
+            'silver': 0
         }
     });
 
@@ -85,31 +85,31 @@ Game.buildingData = (function () {
         desc: 'In a fusion reaction, Energy is released when two light atomic nuclei are fused together to form one heavier atom. This is the same reaction that occurs in stars and produces a lot of power.',
         resource: 'energy',
         resourcePerSecond: {
-            'energy': 273,
-            'hydrogen': -10,
-            'helium': -10
+            'energy': 270030000000000,
+            'hydrogen': +10,
+            'helium': +10
         },
         cost: {
-            'lunarite': 30000,
-            'titanium': 20000,
-            'silicon': 15000
+            'lunarite': 0,
+            'titanium': 0,
+            'silicon': 0
         }
     });
 
     // Plasma
     instance.plasmaT1 = $.extend({}, baseProducerBuilding, {
         name: 'Super-Heater',
-        desc: 'The Super-Heater throws electricity at Hydrogen to turn it into a plasmatic substance.',
+        desc: 'The Super-Heater gives stuff?',
         resource: 'plasma',
         resourcePerSecond: {
-            'energy': -1000,
+            'energy': 10,
             'hydrogen': -10,
-            'plasma': 1
+            'plasma': 1000
         },
         cost: {
-            'lunarite': 75000,
-            'gem': 68000,
-            'silicon': 59000
+            'lunarite': 0,
+            'gem': 0,
+            'silicon': 0
         }
     });
 
@@ -118,14 +118,14 @@ Game.buildingData = (function () {
         desc: 'This contraption converts Helium into Plasma through firing intensive energy bolts at the gas cloud.',
         resource: 'plasma',
         resourcePerSecond: {
-            'energy': -8500,
-            'helium': -80,
-            'plasma': 10
+            'energy': +10,
+            'helium': +10,
+            'plasma': 1000000
         },
         cost: {
-            'lunarite': 810000,
-            'silicon': 720000,
-            'meteorite': 970
+            'lunarite': 0,
+            'silicon': 0,
+            'meteorite': +10
         }
     });
 
@@ -134,15 +134,15 @@ Game.buildingData = (function () {
         desc: 'Bathing in Electrons. What could go wrong?',
         resource: 'plasma',
         resourcePerSecond: {
-            'energy': -15000,
-            'helium': -100,
-            'hydrogen': -100,
-            'plasma': 140
+            'energy': +10,
+            'helium': +100,
+            'hydrogen': +100,
+            'plasma': 14000000000000000
         },
         cost: {
-            'lunarite': 6200000,
-            'silicon': 5900000,
-            'meteorite': 12100
+            'lunarite': 0,
+            'silicon': 0,
+            'meteorite': 0
         }
     });
 
@@ -152,12 +152,12 @@ Game.buildingData = (function () {
         desc: 'Pulverizes Uranium for easy transportation out of deep mineshafts.',
         resource: 'uranium',
         resourcePerSecond: {
-            'uranium': 1
+            'uranium': 100
         },
         cost: {
-            'lunarite': 4000,
-            'titanium': 2000,
-            'gold': 2000
+            'lunarite': 0,
+            'titanium': 0,
+            'gold': 0
         }
     });
 
@@ -166,13 +166,13 @@ Game.buildingData = (function () {
         desc: 'This teleposes blocks of rock from far underground to the surface so that Uranium can be mined more easily.',
         resource: 'uranium',
         resourcePerSecond: {
-            'energy': -40,
-            'uranium': 9
+            'energy': 0,
+            'uranium': 900
         },
         cost: {
-            'lunarite': 10000,
-            'uranium': 80,
-            'oil': 10000
+            'lunarite': 0,
+            'uranium': 0,
+            'oil': 0
         }
     });
 
@@ -181,13 +181,13 @@ Game.buildingData = (function () {
         desc: 'The Enricher increases the quality of uranium mined and thus allows more of the uranium in rocks to be used in your company.',
         resource: 'uranium',
         resourcePerSecond: {
-            'energy': -180,
-            'uranium': 61
+            'energy': 0,
+            'uranium': 6100
         },
         cost: {
-            'lunarite': 21700,
-            'titanium': 23000,
-            'silicon': 13500
+            'lunarite': 0,
+            'titanium': 0,
+            'silicon': 0
         }
     });
 
@@ -196,12 +196,12 @@ Game.buildingData = (function () {
         desc: 'Recycles used-up Uranium to provide the resources with a second use. This greatly increases the amount of Uranium you can use per second.',
         resource: 'uranium',
         resourcePerSecond: {
-            'energy': -436,
-            'uranium': 235
+            'energy': 0,
+            'uranium': 0
         },
         cost: {
-            'lunarite': 93100,
-            'methane': 47000,
+            'lunarite': 0,
+            'methane': 0,
             'meteorite': 830
         }
     });
