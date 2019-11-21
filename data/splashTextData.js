@@ -15,6 +15,13 @@ var splashTextArray = ["ITS A GAME THAT IS BROCKEN",
 "That look... It kills you.",		       
 "I want... Nothing",		       
 "OOOOOOOO you ... oh, wait, i dont do that",
+"<span id="versionLabel"></span>",
+"<span id="versionLabel"></span>",		       
+"<span id="versionLabel"></span>",		       
+"<span id="versionLabel"></span>",		       
+"<span id="versionLabel"></span>",		       
+"<span id="versionLabel"></span>",		       
+"<span id="versionLabel"></span>",		       
 ];
 var splashText = splashTextArray[Math.floor(Math.random()*splashTextArray.length)];
 
