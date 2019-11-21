@@ -11,6 +11,10 @@ var splashTextArray = ["ITS A GAME THAT IS BROCKEN",
 "Well, Stalked yet again",		       
 "Spam!!!!!!!!!!!!!! We love it!!",
 "Hacked!",
+"Ipads? Why they be mentioned here",		       
+"That look... It kills you.",		       
+"I want... Nothing",		       
+"OOOOOOOO you ... oh, wait, i dont do that",
 ];
 var splashText = splashTextArray[Math.floor(Math.random()*splashTextArray.length)];
 
