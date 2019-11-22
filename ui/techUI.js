@@ -16,7 +16,7 @@ Game.techUI = (function() {
 			'Costs <span id="{{htmlIdCost}}"></span> Science',
 			'</span>',
 			'<br><br>',
-			'<button id="{{htmlIdButton}}" onclick="purchaseTech(\'{{id}}\')" class="btn btn-outline-secondary">',
+			'<button id="{{htmlIdButton}}" onclick="purchaseTech(\'{{id}}\')" class="btn btn-outline-warning">',
 			'{{buttonText}}',
 			'</button>',
 			'<br><br>',
