@@ -1,6 +1,6 @@
 // Variables in save function
 
-var versionNumber = "V 0.0.2 Beta"; var companyName = "To Be Named";
+var versionNumber = "V 0.0.3 Dev"; var companyName = "To Be Named";
 
 // unlocked & activated
 
@@ -12,9 +12,9 @@ var globalEnergyLock = false;
 
 // Plasma
 var plasma = 0; var plasmaps = 0;
-var PSU = 0; var PSUSilverCost = 770000; var PSUGoldCost = 770000; var PSUUraniumCost = 550000;
-var PSUT2 = 0; var PSUT2SilverCost = 9300000; var PSUT2GoldCost = 9300000; var PSUT2UraniumCost = 6800000;
-var heater = 0; var heaterLunariteCost = 75000; var heaterGemCost = 68000; var heaterSiliconCost = 59000; var heaterToggled = true; var heaterEnergyInput = 1000; var heaterHydrogenInput = 10; var heaterOutput = 1;
+var PSU = 0; var PSUSilverCost = 0; var PSUGoldCost = 0; var PSUUraniumCost = 0;
+var PSUT2 = 0; var PSUT2SilverCost = 0; var PSUT2GoldCost = 0; var PSUT2UraniumCost = 0;
+var heater = 0; var heaterLunariteCost = 75000; var heaterGemCost = 0; var heaterSiliconCost = 0; var heaterToggled = true; var heaterEnergyInput = 100; var heaterHydrogenInput = 5; var heaterOutput = 1;
 var plasmatic = 0; var plasmaticLunariteCost = 810000; var plasmaticSiliconCost = 720000; var plasmaticMeteoriteCost = 970; var plasmaticToggled = true; var plasmaticEnergyInput = 8500; var plasmaticHeliumInput = 80; var plasmaticOutput = 10;
 var bath = 0; var bathLavaCost = 6200000; var bathGoldCost = 5900000; var bathMeteoriteCost = 12100; var bathToggled = true; var bathEnergyInput = 15000; var bathHydrogenInput = 100; var bathHeliumInput = 100; var bathOutput = 140;
 
