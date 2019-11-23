@@ -14,9 +14,9 @@ var globalEnergyLock = false;
 var plasma = 0; var plasmaps = 0;
 var PSU = 0; var PSUSilverCost = 0; var PSUGoldCost = 0; var PSUUraniumCost = 0;
 var PSUT2 = 0; var PSUT2SilverCost = 0; var PSUT2GoldCost = 0; var PSUT2UraniumCost = 0;
-var heater = 0; var heaterLunariteCost = 75000; var heaterGemCost = 0; var heaterSiliconCost = 0; var heaterToggled = true; var heaterEnergyInput = 100; var heaterHydrogenInput = 5; var heaterOutput = 1;
-var plasmatic = 0; var plasmaticLunariteCost = 810000; var plasmaticSiliconCost = 720000; var plasmaticMeteoriteCost = 970; var plasmaticToggled = true; var plasmaticEnergyInput = 8500; var plasmaticHeliumInput = 80; var plasmaticOutput = 10;
-var bath = 0; var bathLavaCost = 6200000; var bathGoldCost = 5900000; var bathMeteoriteCost = 12100; var bathToggled = true; var bathEnergyInput = 15000; var bathHydrogenInput = 100; var bathHeliumInput = 100; var bathOutput = 140;
+var heater = 0; var heaterLunariteCost = 0; var heaterGemCost = 0; var heaterSiliconCost = 0; var heaterToggled = true; var heaterEnergyInput = 100; var heaterHydrogenInput = 5; var heaterOutput = 1;
+var plasmatic = 0; var plasmaticLunariteCost = 0; var plasmaticSiliconCost = 0; var plasmaticMeteoriteCost = 0; var plasmaticToggled = true; var plasmaticEnergyInput = 80; var plasmaticHeliumInput = 80; var plasmaticOutput = 100;
+var bath = 0; var bathLavaCost = 0; var bathGoldCost = 0; var bathMeteoriteCost = 0; var bathToggled = true; var bathEnergyInput = 150; var bathHydrogenInput = 10; var bathHeliumInput = 100; var bathOutput = 1040;
 
 // Energy
 var energy = 0; var energyps = 0;
@@ -49,7 +49,7 @@ var veluptuator = 0; var veluptuatorLunariteCost = 298000; var veluptuatorGoldCo
 var condensator = 0; var condensatorLunariteCost = 288000; var condensatorGemCost = 210000; var condensatorIceCost = 238000; var condensatorEnergyInput = 4142; var condensatorOutput = 2103;
 
 // Oil
-var oil = 0; var oilStorage = 50000; var oilNextStorage = 100; var oilps = 0;
+var oil = 0; var oilStorage = 50000; var oilNextStorage = 100000000; var oilps = 0;
 var pump = 0; var pumpMetalCost = 60; var pumpGemCost = 20; var pumpOutput = 1;
 var pumpjack = 0; var pumpjackMetalCost = 250; var pumpjackGemCost = 80; var pumpjackOilCost = 50; var pumpjackEnergyInput = 4; var pumpjackOutput = 10;
 var oilField = 0; var oilFieldLunariteCost = 2400; var oilFieldTitaniumCost = 2700; var oilFieldSiliconCost = 3900; var oilFieldEnergyInput = 17; var oilFieldOutput = 63;
@@ -57,7 +57,7 @@ var oilRig = 0; var oilRigLunariteCost = 19400; var oilRigTitaniumCost = 16800; 
 var fossilator = 0; var fossilatorUraniumCost = 110000; var fossilatorCharcoalCost = 96000; var fossilatorLavaCost = 167000; var fossilatorEnergyInput = 258; var fossilatorOutput = 2627;
 
 // Metal
-var metal = 0; var metalStorage = 500000; var metalNextStorage = 100; var metalps = 0;
+var metal = 0; var metalStorage = 500000; var metalNextStorage = 100000000; var metalps = 0;
 var miner = 0; var minerMetalCost = 10; var minerWoodCost = 5; var minerOutput = 1;
 var heavyDrill = 0; var heavyDrillMetalCost = 160; var heavyDrillGemCost = 60; var heavyDrillOilCost = 50; var heavyDrillEnergyInput = 2; var heavyDrillOutput = 8;
 var gigaDrill = 0; var gigaDrillLunariteCost = 2800; var gigaDrillGemCost = 3400; var gigaDrillSiliconCost = 4100; var gigaDrillEnergyInput = 9; var gigaDrillOutput = 108;
@@ -73,7 +73,7 @@ var carbyneDrill = 0; var carbyneDrillLunariteCost = 21000; var carbyneDrillGemC
 var diamondChamber = 0; var diamondChamberUraniumCost = 181000; var diamondChamberCharcoalCost = 1850; var diamondChamberMeteoriteCost = 12500; var diamondChamberEnergyInput = 260;  var diamondChamberOutput = 374007;
 
 // Charcoal
-var charcoal = 0; var charcoalStorage = 500000; var charcoalNextStorage = 100; var charcoalps = 0; var charcoalToggled = true;
+var charcoal = 0; var charcoalStorage = 500000; var charcoalNextStorage = 100000000; var charcoalps = 0; var charcoalToggled = true;
 var woodburner = 0; var woodburnerMetalCost = 0; var woodburnerWoodCost = 0; var woodburnerWoodInput = 2; var woodburnerOutput = 1;
 var furnace = 0; var furnaceMetalCost = 0; var furnaceWoodCost = 0; var furnaceOilCost = 0; var furnaceEnergyInput = 0; var furnaceWoodInput = 0; var furnaceOutput = 4;
 var kiln = 0; var kilnLunariteCost = 0; var kilnGemCost = 0; var kilnSiliconCost = 0; var kilnEnergyInput = 0; var kilnWoodInput = 0; var kilnOutput = 53;
@@ -169,24 +169,24 @@ var nebulous = 0; var nebulousLunariteCost = 25800000; var nebulousLavaCost = 19
 
 // Science
 var science = 0; var scienceps = 0;
-var lab = 0; var labMetalCost = 20; var labGemCost = 15; var labWoodCost = 10; var labOutput = 10;
-var labT2 = 0; var labT2MetalCost = 1000; var labT2GemCost = 200; var labT2WoodCost = 500; var labT2Output = 1000;
-var labT3 = 0; var labT3MetalCost = 17000; var labT3GemCost = 4700; var labT3WoodCost = 9600; var labT3Output = 10000;
-var labT4 = 0; var labT4MetalCost = 610000; var labT4GemCost = 370000; var labT4WoodCost = 926000; var labT4Output = 100000;
-var labT5 = 0; var labT5MetalCost = 12400000; var labT5GemCost = 7300000; var labT5WoodCost = 15900000; var labT5Output = 1000000;
+var lab = 0; var labMetalCost = 0; var labGemCost = 15; var labWoodCost = 10; var labOutput = 100000;
+var labT2 = 0; var labT2MetalCost = 1000; var labT2GemCost = 200; var labT2WoodCost = 500; var labT2Output = 1000000000;
+var labT3 = 0; var labT3MetalCost = 17000; var labT3GemCost = 4700; var labT3WoodCost = 9600; var labT3Output = 1000000000000;
+var labT4 = 0; var labT4MetalCost = 610000; var labT4GemCost = 370000; var labT4WoodCost = 926000; var labT4Output = 10000000000000;
+var labT5 = 0; var labT5MetalCost = 12400000; var labT5GemCost = 7300000; var labT5WoodCost = 15900000; var labT5Output = 100000000000000000;
 
 // Rocket & Rocket Fuel
 var rocket = 0; var rocketFuel = 0; var rocketFuelps = 0; var rocketFuelToggled = true;
-var chemicalPlant = 0; var chemicalPlantMetalCost = 1000; var chemicalPlantGemCost = 750; var chemicalPlantOilCost = 500; var chemicalPlantOilInput = 0; var chemicalPlantCharcoalInput = 0; var chemicalPlantOutput = 0.2;
-var oxidisation = 0; var oxidisationMetalCost = 12000; var oxidisationGemCost = 8300; var oxidisationOilCost = 6800; var oxidisationOilInput = 0; var oxidisationCharcoalInput = 0; var oxidisationOutput = 15;
-var hydrazine = 0; var hydrazineTitaniumCost = 140000; var hydrazineSiliconCost = 96300; var hydrazineGoldCost = 78600; var hydrazineMethaneInput = 0; var hydrazineOutput = 2000;
+var chemicalPlant = 0; var chemicalPlantMetalCost = 10; var chemicalPlantGemCost = 70; var chemicalPlantOilCost = 50; var chemicalPlantOilInput = 0; var chemicalPlantCharcoalInput = 0; var chemicalPlantOutput = 2;
+var oxidisation = 0; var oxidisationMetalCost = 20; var oxidisationGemCost = 80; var oxidisationOilCost = 60; var oxidisationOilInput = 0; var oxidisationCharcoalInput = 0; var oxidisationOutput = 15;
+var hydrazine = 0; var hydrazineTitaniumCost = 400; var hydrazineSiliconCost = 90; var hydrazineGoldCost = 70; var hydrazineMethaneInput = 0; var hydrazineOutput = 200;
 
 // Sol Centre
 var autoResource = null;
-var dyson = 0; var dysonTitaniumCost = 3000; var dysonGoldCost = 1000; var dysonSiliconCost = 2000; var dysonMeteoriteCost = 1000; var dysonIceCost = 1000;
-var ring = 0; var ringOutput = 50000;
-var swarm = 0; var swarmOutput = 250000;
-var sphere = 0; var sphereOutput = 100000000;
+var dyson = 0; var dysonTitaniumCost = 300; var dysonGoldCost = 100; var dysonSiliconCost = 200; var dysonMeteoriteCost = 100; var dysonIceCost = 100;
+var ring = 0; var ringOutput = 500000;
+var swarm = 0; var swarmOutput = 2500000;
+var sphere = 0; var sphereOutput = 10000000000;
 
 // Antimatter
 var antimatter = 0; var antimatterps = 0; var antimatterStorage = 100000000; var antimatterToggled = true;
