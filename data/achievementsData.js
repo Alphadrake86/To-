@@ -1,4 +1,4 @@
-Game.achievementsCategoryData = (function () {
+//Game.achievementsCategoryData = (function () {
 
 	var instance = {};
 		
@@ -51,7 +51,7 @@ Game.achievementsCategoryData = (function () {
 
 }());
 
-Game.achievementsData = (function(){
+//Game.achievementsData = (function(){
 
 	var instance = {};
 	
